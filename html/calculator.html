@@ -2,77 +2,79 @@
   <head>
     <title>Calculator</title>
     <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
   </head>
   <body>
     <div class="calculator">
         <div class="display"></div>
         <div class="button-row">
-            <div class="button">
+            <div class="button clear" data-value="clear">
                 C
             </div>
-            <div class="button">
+            <div class="button plusminus" data-value="plusminus">
                 ±
             </div>
-            <div class="button">
+            <div class="button percent" data-value="percent">
                 %
             </div>
-            <div class="button basic">
+            <div class="button basic operator" data-value="divide">
                 ÷
             </div>
         </div>
         <div class="button-row">
-            <div class="button">
+            <div class="button digit" data-value="7">
                 7
             </div>
-            <div class="button">
+            <div class="button digit" data-value="8">
                 8
             </div>
-            <div class="button">
+            <div class="button digit" data-value="9">
                 9
             </div>
-            <div class="button basic">
+            <div class="button basic operator" data-value="multiply">
                 ×
             </div>
         </div>
         <div class="button-row">
-            <div class="button">
+            <div class="button digit" data-value="4">
                 4
             </div>
-            <div class="button">
+            <div class="button digit" data-value="5">
                 5
             </div>
-            <div class="button">
+            <div class="button digit" data-value="6">
                 6
             </div>
-            <div class="button basic">
+            <div class="button basic operator" data-value="minus">
                 -
             </div>
         </div>
         <div class="button-row">
-            <div class="button">
+            <div class="button digit" data-value="1">
                 1
             </div>
-            <div class="button">
+            <div class="button digit" data-value="2">
                 2
             </div>
-            <div class="button">
+            <div class="button digit" data-value="3">
                 3
             </div>
-            <div class="button basic">
+            <div class="button basic operator" data-value="plus">
                 +
             </div>
         </div>
         <div class="button-row">
-            <div class="button zero">
+            <div class="button zero digit" data-value="0">
                 0
             </div>
-            <div class="button">
+            <div class="button fraction">
                 .
             </div>
-            <div class="button basic">
+            <div class="button basic equal" data-value="equal">
                 =
             </div>
         </div>
     </div>
+    <script type="text/javascript" src="../js/script.js"></script>
   </body>
 </html>
