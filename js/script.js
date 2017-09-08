@@ -23,13 +23,33 @@ $(document).ready(function () {
     $('.digit').on('click', function () {
         digit = $(this).data('value');
         mainOperand = addDigit(mainOperand, digit);
+        console.log(mainOperand % 1);
         display();
     });
 
-    $('.fraction').on('click', function () {
-        fraction = true;
-        mainOperand += ".";
+    $('.modifier').on('click', function () {
+        switch ($(this).data('value')) {
+            case 'fraction':
+                if (!fraction) {
+                    fraction = true;
+                    mainOperand += ".";
+                }
+                break;
+            case 'clear':
+                mainOperand = 0;
+                secondaryOperand = 0;
+                fraction = false;
+                break;
+            case 'plusminus':
+                mainOperand = -mainOperand;
+                break;
+            case 'percent':
+                mainOperand /= 100;
+                if (0 < mainOperand % 1) {
+                    fraction = true;
+                }
+                break;
+        }
         display();
     });
-
 });
