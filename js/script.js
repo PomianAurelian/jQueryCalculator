@@ -20,10 +20,17 @@ $(document).ready(function () {
         return number;
     };
 
+    $('.button')
+        .mouseup(function() {
+            $(this).removeClass('highlight');
+        })
+        .mousedown(function() {
+            $(this).addClass('highlight');
+        });
+
     $('.digit').on('click', function () {
         digit = $(this).data('value');
         mainOperand = addDigit(mainOperand, digit);
-        console.log(mainOperand % 1);
         display();
     });
 
